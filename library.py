@@ -1,5 +1,5 @@
 from random import *
-
+import os
 import datetime
 import mysql.connector
 con=mysql.connector.connect(host='localhost',user='root',password='',database='dbit')
@@ -8,8 +8,7 @@ cur=con.cursor()
 print("Press 1. to issue book")
 print("Press 2. to return book")
 print("Press 3. to to check status")
-print("Press 4. to check fine")
-print("Press 5. exit ")
+print("Press 4. exit ")
 
 n=int(input("enter the choice : "))
 
@@ -80,3 +79,7 @@ if n==3:
     for d in cur:
         if x==0:
             print("invalid student id ")
+
+if n==4:
+    print("thank u ")
+    os.system("exit");
